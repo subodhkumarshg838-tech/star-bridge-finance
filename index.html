@@ -4,39 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Star Bridge Finance Solution provides professional financial assistance and guidance for individuals, self-employed applicants and eligible businesses.">
-<meta name="keywords" content="Star Bridge Finance Solution, loan assistance, business finance, MSME finance, personal finance">
-<meta name="author" content="Star Bridge Finance Solution">
+<title>Star Bridge Finance Solution | Financial Solutions in India</title>
 
-<title>Star Bridge Finance Solution | Financial Guidance Made Simple</title>
+<meta name="description"
+      content="Star Bridge Finance Solution provides professional financial assistance and guidance for individuals, self-employed applicants and businesses in India. Based in Greater Noida.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap"
+      rel="stylesheet">
 
 <style>
+
 :root{
-  --navy:#0d1b2a;
-  --navy-2:#13283d;
-  --blue:#1d526b;
-  --blue-light:#eaf3f6;
+  --ink:#132038;
+  --ink-2:#1c2d4d;
   --gold:#c6a15b;
-  --gold-light:#ead9ae;
-  --cream:#f8f7f3;
+  --gold-soft:#e4cf9f;
+  --teal:#2f5d62;
+  --paper:#faf8f4;
+  --paper-2:#f1ede4;
+  --slate:#4a5568;
+  --line:#dcd5c6;
   --white:#ffffff;
-  --text:#253448;
-  --muted:#667384;
-  --border:#dfe3e6;
-  --success:#16805b;
-  --shadow:0 18px 50px rgba(13,27,42,.09);
-  --radius:8px;
-  --max:1180px;
+  --success:#4caf50;
+  --radius:3px;
 }
 
 *{
   box-sizing:border-box;
-  margin:0;
-  padding:0;
 }
 
 html{
@@ -44,14 +41,38 @@ html{
 }
 
 body{
-  font-family:"DM Sans",sans-serif;
-  color:var(--text);
-  background:var(--cream);
-  line-height:1.65;
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'IBM Plex Sans',sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
 }
 
-body.menu-open{
-  overflow:hidden;
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *{
+    animation-duration:.001ms!important;
+    transition-duration:.001ms!important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4{
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  margin:0;
+  color:var(--ink);
+  letter-spacing:-.01em;
+}
+
+p{
+  margin:0;
 }
 
 a{
@@ -59,88 +80,58 @@ a{
   text-decoration:none;
 }
 
-button,
-input,
-select,
-textarea{
-  font:inherit;
+ul{
+  margin:0;
+  padding:0;
+  list-style:none;
 }
 
 button{
+  font-family:inherit;
   cursor:pointer;
 }
 
-img{
-  max-width:100%;
-}
-
-.container{
-  width:min(var(--max),calc(100% - 40px));
-  margin:auto;
+.wrap{
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 32px;
 }
 
 section{
-  padding:90px 0;
+  padding:96px 0;
 }
 
-.section-label{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:var(--blue);
-  font-size:.76rem;
-  font-weight:700;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-}
+@media(max-width:720px){
 
-.section-label::before{
-  content:"";
-  width:28px;
-  height:2px;
-  background:var(--gold);
-}
+  section{
+    padding:64px 0;
+  }
 
-.section-title{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:clamp(2rem,4vw,3.15rem);
-  line-height:1.15;
-  margin-top:15px;
-}
-
-.section-text{
-  color:var(--muted);
-  max-width:680px;
-  margin-top:18px;
-  font-size:1rem;
+  .wrap{
+    padding:0 20px;
+  }
 }
 
 /* =========================
-   TOP BAR
+   SMALL SECTION LABEL
 ========================= */
 
-.topbar{
-  background:var(--navy);
-  color:#dce5ed;
-  font-size:.8rem;
-}
-
-.topbar-inner{
-  min-height:38px;
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--teal);
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  gap:20px;
+  gap:10px;
 }
 
-.topbar-right{
-  display:flex;
-  gap:22px;
-}
-
-.topbar a:hover{
-  color:var(--gold-light);
+.eyebrow::before{
+  content:"";
+  width:22px;
+  height:1px;
+  background:var(--gold);
 }
 
 /* =========================
@@ -150,136 +141,137 @@ section{
 header{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:rgba(248,247,243,.96);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(12px);
+  z-index:100;
+  background:rgba(250,248,244,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
 }
 
 .nav{
-  height:78px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:30px;
+  padding:17px 32px;
+  max-width:1180px;
+  margin:0 auto;
 }
 
-.logo{
+.brand{
   display:flex;
   align-items:center;
   gap:12px;
-}
-
-.logo-mark{
-  width:42px;
-  height:42px;
-  background:var(--navy);
-  border-radius:7px;
-  display:grid;
-  place-items:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.logo-mark::before{
-  content:"";
-  position:absolute;
-  width:29px;
-  height:16px;
-  border:2px solid var(--gold);
-  border-bottom:0;
-  border-radius:30px 30px 0 0;
-  top:12px;
-}
-
-.logo-mark::after{
-  content:"";
-  position:absolute;
-  width:25px;
-  height:2px;
-  background:var(--gold);
-  top:28px;
-}
-
-.logo-text{
-  display:flex;
-  flex-direction:column;
-}
-
-.logo-main{
-  font-family:"Playfair Display",serif;
+  font-family:'Fraunces',serif;
+  font-weight:600;
   font-size:1.08rem;
-  font-weight:700;
-  color:var(--navy);
-  line-height:1.1;
+  color:var(--ink);
 }
 
-.logo-sub{
-  font-size:.65rem;
-  color:var(--blue);
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-top:3px;
+.brand svg{
+  width:30px;
+  height:30px;
+  flex-shrink:0;
+}
+
+.brand-name{
+  white-space:nowrap;
 }
 
 .nav-links{
   display:flex;
   align-items:center;
-  gap:30px;
-  list-style:none;
+  gap:34px;
+  font-size:.92rem;
 }
 
 .nav-links a{
-  color:var(--navy);
-  font-size:.88rem;
-  font-weight:600;
   position:relative;
+  color:var(--ink-2);
+  padding:4px 0;
 }
 
-.nav-links a:not(.nav-button)::after{
+.nav-links a::after{
   content:"";
   position:absolute;
   left:0;
   right:0;
-  bottom:-7px;
-  height:2px;
+  bottom:-2px;
+  height:1px;
   background:var(--gold);
   transform:scaleX(0);
   transform-origin:left;
-  transition:.2s ease;
+  transition:transform .25s ease;
 }
 
-.nav-links a:not(.nav-button):hover::after{
+.nav-links a:hover::after{
   transform:scaleX(1);
 }
 
-.nav-button{
-  background:var(--navy);
-  color:white!important;
-  padding:11px 19px;
-  border-radius:5px;
-  transition:.2s ease;
+.nav-cta{
+  background:var(--ink);
+  color:var(--paper)!important;
+  padding:10px 20px!important;
+  border-radius:var(--radius);
+  font-size:.86rem;
+  font-weight:500;
+  border:1px solid var(--ink);
 }
 
-.nav-button:hover{
-  background:var(--blue);
+.nav-cta:hover{
+  background:transparent;
+  color:var(--ink)!important;
 }
 
-.menu-button{
+.nav-cta::after{
   display:none;
-  width:42px;
-  height:42px;
-  border:1px solid var(--border);
-  background:white;
-  border-radius:6px;
 }
 
-.menu-button span{
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  padding:6px;
+}
+
+.nav-toggle span{
   display:block;
-  width:21px;
-  height:2px;
-  background:var(--navy);
-  margin:4px auto;
+  width:23px;
+  height:1.5px;
+  background:var(--ink);
+  margin:5px 0;
+}
+
+@media(max-width:860px){
+
+  .nav{
+    padding:15px 20px;
+  }
+
+  .nav-links{
+    position:fixed;
+    top:62px;
+    left:0;
+    right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+    padding:28px 24px 32px;
+    border-bottom:1px solid var(--line);
+    transform:translateY(-130%);
+    transition:transform .3s ease;
+  }
+
+  .nav-links.open{
+    transform:translateY(0);
+  }
+
+  .nav-toggle{
+    display:block;
+  }
+
+  .brand-name{
+    font-size:.95rem;
+  }
 }
 
 /* =========================
@@ -287,512 +279,432 @@ header{
 ========================= */
 
 .hero{
-  padding:95px 0 85px;
-  background:
-    radial-gradient(circle at 90% 15%,rgba(198,161,91,.13),transparent 28%),
-    linear-gradient(135deg,#f8f7f3 0%,#f1f5f5 100%);
+  padding:105px 0 70px;
+  position:relative;
   overflow:hidden;
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.05fr .95fr;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
   align-items:center;
-  gap:75px;
 }
 
 .hero h1{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:clamp(2.8rem,6vw,5rem);
-  line-height:1.04;
+  font-size:clamp(2.3rem,4.6vw,3.6rem);
+  line-height:1.08;
   margin:18px 0 22px;
-  letter-spacing:-.035em;
 }
 
-.hero h1 span{
-  color:var(--blue);
+.hero h1 em{
+  font-style:italic;
+  color:var(--teal);
 }
 
-.hero-description{
-  color:var(--muted);
-  max-width:650px;
-  font-size:1.08rem;
-  line-height:1.8;
+.hero-sub{
+  font-size:1.06rem;
+  color:var(--slate);
+  max-width:49ch;
+  margin-bottom:34px;
 }
 
-.buttons{
+.btn-row{
   display:flex;
+  gap:16px;
   flex-wrap:wrap;
-  gap:13px;
-  margin-top:32px;
 }
 
 .btn{
+  padding:14px 26px;
+  border-radius:var(--radius);
+  font-size:.92rem;
+  font-weight:500;
   display:inline-flex;
   align-items:center;
-  justify-content:center;
-  gap:9px;
-  min-height:48px;
-  padding:0 23px;
-  border-radius:5px;
-  font-size:.9rem;
-  font-weight:700;
-  transition:.2s ease;
+  gap:10px;
+  transition:all .2s ease;
+  border:1px solid transparent;
 }
 
 .btn-primary{
-  background:var(--navy);
-  color:white;
+  background:var(--ink);
+  color:var(--paper);
 }
 
 .btn-primary:hover{
-  background:var(--blue);
-  transform:translateY(-1px);
+  background:var(--ink-2);
 }
 
-.btn-secondary{
-  border:1px solid var(--navy);
-  color:var(--navy);
+.btn-ghost{
+  border-color:var(--ink);
+  color:var(--ink);
   background:transparent;
 }
 
-.btn-secondary:hover{
-  background:var(--navy);
-  color:white;
+.btn-ghost:hover{
+  background:var(--ink);
+  color:var(--paper);
 }
 
-.btn-whatsapp{
-  background:#16805b;
-  color:white;
-}
-
-.btn-whatsapp:hover{
-  background:#116b4c;
-}
-
-.hero-note{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  margin-top:24px;
-  color:#697584;
-  font-size:.78rem;
-}
-
-.hero-note::before{
-  content:"";
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:var(--success);
-}
-
-/* Hero card */
-
-.hero-card{
-  background:var(--navy);
-  color:white;
-  border-radius:12px;
-  padding:42px;
+.hero-panel{
+  background:var(--ink);
+  border-radius:var(--radius);
+  padding:40px 36px;
   position:relative;
-  box-shadow:var(--shadow);
-  overflow:hidden;
+  color:var(--paper);
 }
 
-.hero-card::before{
+.hero-panel::before{
   content:"";
   position:absolute;
-  width:300px;
-  height:300px;
-  border:1px solid rgba(198,161,91,.28);
-  border-radius:50%;
-  right:-130px;
-  top:-120px;
+  inset:8px;
+  border:1px solid rgba(198,161,91,.35);
+  pointer-events:none;
 }
 
-.hero-card::after{
-  content:"";
-  position:absolute;
-  width:210px;
-  height:210px;
-  border:1px solid rgba(198,161,91,.16);
-  border-radius:50%;
-  right:-80px;
-  top:-75px;
-}
-
-.card-label{
-  color:var(--gold-light);
+.hero-panel .tag{
+  font-family:'IBM Plex Mono',monospace;
   font-size:.7rem;
-  letter-spacing:.15em;
+  letter-spacing:.14em;
   text-transform:uppercase;
-  font-weight:700;
+  color:var(--gold-soft);
+  margin-bottom:20px;
+  display:block;
 }
 
-.hero-card h2{
-  font-family:"Playfair Display",serif;
-  font-size:2rem;
-  line-height:1.2;
-  margin:16px 0;
-  position:relative;
-  z-index:2;
+.hero-panel h3{
+  color:var(--paper);
+  font-size:1.35rem;
+  margin-bottom:14px;
+  line-height:1.3;
 }
 
-.hero-card p{
-  color:#c6d0db;
+.hero-panel p{
+  color:#c7cede;
   font-size:.94rem;
-  position:relative;
-  z-index:2;
+  margin-bottom:22px;
 }
 
-.feature-list{
-  margin-top:28px;
-  display:grid;
-  gap:12px;
-  position:relative;
-  z-index:2;
-}
-
-.feature-list li{
+.service-pills{
   display:flex;
-  align-items:center;
-  gap:12px;
-  color:#e6edf2;
-  font-size:.88rem;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
-.feature-list li::before{
-  content:"✓";
-  width:23px;
-  height:23px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:rgba(198,161,91,.15);
-  color:var(--gold-light);
-  font-size:.75rem;
-  flex-shrink:0;
+.service-pills span{
+  border:1px solid rgba(255,255,255,.18);
+  color:#dfe4ee;
+  font-size:.76rem;
+  padding:6px 12px;
+  border-radius:20px;
+}
+
+@media(max-width:900px){
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .hero{
+    padding:75px 0 55px;
+  }
+}
+
+/* =========================
+   BRIDGE DIVIDER
+========================= */
+
+.bridge-divider{
+  width:100%;
+  height:64px;
+  display:block;
+}
+
+.bridge-divider path{
+  fill:none;
+  stroke:var(--gold);
+  stroke-width:1.2;
+  opacity:.55;
+}
+
+.bridge-divider .deck{
+  stroke:var(--line);
+  stroke-width:1;
 }
 
 /* =========================
    SERVICES
 ========================= */
 
-.services{
-  background:white;
-}
-
-.services-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:30px;
-}
-
-.service-grid{
-  margin-top:50px;
+.services-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:18px;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  margin-top:48px;
 }
 
 .service-card{
-  background:var(--cream);
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:30px 25px;
-  transition:.25s ease;
+  background:var(--paper);
+  padding:34px 28px;
+  transition:background .25s ease,transform .25s ease;
 }
 
 .service-card:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--shadow);
-  border-color:#c8d2d8;
+  background:var(--paper-2);
+  transform:translateY(-3px);
 }
 
-.service-number{
+.service-card .num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.75rem;
   color:var(--gold);
-  font-weight:700;
-  font-size:.76rem;
-  letter-spacing:.12em;
-}
-
-.service-icon{
-  width:48px;
-  height:48px;
-  margin:20px 0;
-  background:var(--blue-light);
-  color:var(--blue);
-  border-radius:8px;
-  display:grid;
-  place-items:center;
-  font-weight:700;
-  font-size:1.15rem;
+  margin-bottom:22px;
+  display:block;
 }
 
 .service-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--navy);
-  font-size:1.28rem;
-  line-height:1.25;
+  font-size:1.12rem;
+  margin-bottom:12px;
 }
 
 .service-card p{
-  color:var(--muted);
-  font-size:.87rem;
-  margin-top:12px;
+  color:var(--slate);
+  font-size:.9rem;
+  margin-bottom:20px;
 }
 
-.service-link{
-  display:inline-block;
-  margin-top:20px;
-  color:var(--blue);
+.service-card a{
   font-size:.82rem;
-  font-weight:700;
+  font-weight:500;
+  color:var(--teal);
+  border-bottom:1px solid var(--teal);
+  padding-bottom:2px;
+}
+
+@media(max-width:900px){
+
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:560px){
+
+  .services-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 /* =========================
-   ABOUT / WHY
+   WHY US
 ========================= */
 
-.about{
-  background:var(--cream);
+.why{
+  background:var(--ink);
+  color:var(--paper);
 }
 
-.about-grid{
+.why .eyebrow{
+  color:var(--gold-soft);
+}
+
+.why .eyebrow::before{
+  background:var(--gold-soft);
+}
+
+.why h2{
+  color:var(--paper);
+}
+
+.why-grid{
   display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:75px;
-  align-items:center;
+  grid-template-columns:repeat(5,1fr);
+  gap:28px;
+  margin-top:52px;
 }
 
-.about-visual{
-  min-height:430px;
-  background:var(--navy);
-  border-radius:10px;
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  align-items:flex-end;
-  padding:38px;
+.why-item{
+  border-top:1px solid rgba(198,161,91,.4);
+  padding-top:18px;
 }
 
-.about-visual::before{
-  content:"";
-  position:absolute;
-  width:380px;
-  height:380px;
-  border:1px solid rgba(198,161,91,.35);
-  border-radius:50%;
-  top:-170px;
-  left:-130px;
+.why-item h4{
+  color:var(--gold-soft);
+  font-size:1rem;
+  margin-bottom:10px;
+  font-weight:500;
 }
 
-.about-visual::after{
-  content:"";
-  position:absolute;
-  width:270px;
-  height:270px;
-  border:1px solid rgba(198,161,91,.22);
-  border-radius:50%;
-  bottom:-150px;
-  right:-100px;
+.why-item p{
+  color:#b8c0d1;
+  font-size:.87rem;
 }
 
-.visual-content{
-  position:relative;
-  z-index:2;
+@media(max-width:1000px){
+
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
-.visual-big{
-  font-family:"Playfair Display",serif;
-  font-size:4rem;
-  color:var(--gold-light);
-  line-height:1;
-}
+@media(max-width:560px){
 
-.visual-small{
-  color:#c9d2dc;
-  max-width:300px;
-  margin-top:12px;
-}
-
-.about-copy p{
-  color:var(--muted);
-  margin-top:18px;
-}
-
-.about-points{
-  margin-top:28px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.about-point{
-  border-top:2px solid var(--gold);
-  padding-top:12px;
-}
-
-.about-point strong{
-  display:block;
-  color:var(--navy);
-  font-size:.92rem;
-}
-
-.about-point span{
-  display:block;
-  color:var(--muted);
-  font-size:.8rem;
-  margin-top:4px;
+  .why-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 /* =========================
    PROCESS
 ========================= */
 
-.process{
-  background:white;
-}
-
-.process-grid{
+.process-list{
   margin-top:52px;
+}
+
+.process-item{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  background:var(--border);
-  border:1px solid var(--border);
+  grid-template-columns:90px 1fr;
+  gap:28px;
+  padding:26px 0;
+  border-top:1px solid var(--line);
 }
 
-.process-card{
-  background:white;
-  padding:32px;
-  min-height:205px;
+.process-item:last-child{
+  border-bottom:1px solid var(--line);
 }
 
-.process-no{
-  color:var(--gold);
-  font-family:"Playfair Display",serif;
+.process-item .step-num{
+  font-family:'Fraunces',serif;
   font-size:2rem;
+  color:var(--gold);
+  font-weight:500;
 }
 
-.process-card h3{
-  color:var(--navy);
-  font-family:"Playfair Display",serif;
-  margin-top:8px;
-  font-size:1.2rem;
+.process-item h4{
+  font-size:1.05rem;
+  margin-bottom:6px;
 }
 
-.process-card p{
-  color:var(--muted);
-  font-size:.86rem;
-  margin-top:10px;
+.process-item p{
+  color:var(--slate);
+  font-size:.92rem;
+  max-width:70ch;
+}
+
+@media(max-width:600px){
+
+  .process-item{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
 }
 
 /* =========================
-   WHY CHOOSE
+   TESTIMONIALS
 ========================= */
 
-.why{
-  background:var(--navy);
-  color:white;
+.testimonials{
+  background:var(--paper-2);
 }
 
-.why .section-label{
-  color:var(--gold-light);
-}
-
-.why .section-title{
-  color:white;
-}
-
-.why .section-text{
-  color:#b8c5d1;
-}
-
-.why-grid{
-  margin-top:48px;
+.test-grid{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:18px;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+  margin-top:52px;
 }
 
-.why-card{
-  border-top:1px solid rgba(198,161,91,.5);
-  padding-top:20px;
+.test-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:30px 26px;
+  position:relative;
 }
 
-.why-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--gold-light);
-  font-size:1.08rem;
+.test-card .mark{
+  font-family:'Fraunces',serif;
+  font-size:2.6rem;
+  color:var(--gold);
+  line-height:1;
+  display:block;
+  margin-bottom:8px;
 }
 
-.why-card p{
-  color:#aebbc8;
-  font-size:.82rem;
-  margin-top:9px;
+.test-card p.quote{
+  font-size:.95rem;
+  color:var(--ink-2);
+  margin-bottom:18px;
+}
+
+.test-card .who{
+  font-size:.8rem;
+  color:var(--slate);
+  font-family:'IBM Plex Mono',monospace;
+}
+
+@media(max-width:860px){
+
+  .test-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 /* =========================
    FAQ
 ========================= */
 
-.faq{
-  background:var(--cream);
-}
-
-.faq-layout{
-  display:grid;
-  grid-template-columns:.7fr 1.3fr;
-  gap:75px;
-}
-
 .faq-list{
-  border-top:1px solid var(--border);
+  margin-top:48px;
+  border-top:1px solid var(--line);
 }
 
 .faq-item{
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid var(--line);
 }
 
-.faq-question{
+.faq-q{
   width:100%;
-  padding:22px 0;
-  border:0;
   background:none;
+  border:none;
+  text-align:left;
+  padding:22px 4px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  text-align:left;
   gap:20px;
-  color:var(--navy);
-  font-family:"Playfair Display",serif;
-  font-size:1rem;
+  font-family:'Fraunces',serif;
+  font-size:1.02rem;
+  color:var(--ink);
 }
 
-.faq-plus{
+.faq-q .plus{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:1.1rem;
   color:var(--gold);
-  font-family:"DM Sans",sans-serif;
-  font-size:1.4rem;
-  transition:.2s ease;
+  transition:transform .25s ease;
+  flex-shrink:0;
 }
 
-.faq-item.active .faq-plus{
+.faq-item.open .plus{
   transform:rotate(45deg);
 }
 
-.faq-answer{
+.faq-a{
   max-height:0;
   overflow:hidden;
   transition:max-height .3s ease;
 }
 
-.faq-answer p{
-  color:var(--muted);
-  font-size:.87rem;
-  padding:0 30px 22px 0;
+.faq-a p{
+  padding:0 4px 24px;
+  color:var(--slate);
+  font-size:.92rem;
+  max-width:70ch;
 }
 
 /* =========================
@@ -800,197 +712,182 @@ header{
 ========================= */
 
 .contact{
-  background:var(--navy);
-  color:white;
+  background:var(--ink);
+  color:var(--paper);
 }
 
-.contact .section-title{
-  color:white;
+.contact .eyebrow{
+  color:var(--gold-soft);
 }
 
-.contact .section-label{
-  color:var(--gold-light);
+.contact .eyebrow::before{
+  background:var(--gold-soft);
+}
+
+.contact h2{
+  color:var(--paper);
 }
 
 .contact-grid{
-  margin-top:48px;
   display:grid;
   grid-template-columns:.85fr 1.15fr;
-  gap:60px;
+  gap:56px;
+  margin-top:48px;
 }
 
-.contact-copy{
-  color:#b9c6d1;
-  margin-top:18px;
-  max-width:480px;
+.contact-info p{
+  color:#b8c0d1;
+  font-size:.95rem;
+  margin-bottom:28px;
+  max-width:46ch;
 }
 
-.contact-details{
-  margin-top:32px;
-  display:grid;
-  gap:0;
-}
-
-.contact-detail{
+.info-row{
   display:flex;
-  gap:15px;
-  padding:17px 0;
-  border-top:1px solid rgba(198,161,91,.25);
+  gap:14px;
+  padding:16px 0;
+  border-top:1px solid rgba(198,161,91,.3);
+  font-size:.9rem;
 }
 
-.contact-detail:last-child{
-  border-bottom:1px solid rgba(198,161,91,.25);
+.info-row:last-of-type{
+  border-bottom:1px solid rgba(198,161,91,.3);
 }
 
-.contact-detail-icon{
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  background:rgba(198,161,91,.12);
-  color:var(--gold-light);
-  display:grid;
-  place-items:center;
+.info-row .label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:var(--gold-soft);
+  width:100px;
   flex-shrink:0;
 }
 
-.contact-detail small{
-  display:block;
-  color:var(--gold-light);
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  font-size:.65rem;
-  font-weight:700;
+.info-row a{
+  color:var(--paper);
 }
 
-.contact-detail span,
-.contact-detail a{
-  display:block;
-  color:#e4ebf0;
-  margin-top:2px;
-  font-size:.88rem;
+.info-row a:hover{
+  color:var(--gold-soft);
 }
 
-.contact-detail a:hover{
-  color:var(--gold-light);
+.disclaimer-note{
+  margin-top:30px;
+  font-size:.78rem!important;
+  color:#8b93a8!important;
+  border-left:2px solid var(--gold);
+  padding-left:14px;
 }
 
-.contact-form{
-  background:#14273b;
-  padding:35px;
-  border:1px solid rgba(198,161,91,.25);
-  border-radius:9px;
-}
+/* =========================
+   FORM
+========================= */
 
-.contact-form h3{
-  font-family:"Playfair Display",serif;
-  color:white;
-  font-size:1.55rem;
-  margin-bottom:6px;
-}
-
-.form-intro{
-  color:#aebbc8;
-  font-size:.82rem;
-  margin-bottom:25px;
+form{
+  display:grid;
+  gap:16px;
 }
 
 .form-row{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:15px;
+  gap:16px;
 }
 
-.form-group{
-  margin-bottom:15px;
-}
-
-.form-group label{
-  display:block;
-  color:var(--gold-light);
+label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.7rem;
   text-transform:uppercase;
   letter-spacing:.08em;
-  font-size:.66rem;
-  font-weight:700;
-  margin-bottom:7px;
+  color:var(--gold-soft);
+  display:block;
+  margin-bottom:8px;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea{
+input,
+select,
+textarea{
   width:100%;
-  border:1px solid rgba(255,255,255,.14);
-  background:rgba(255,255,255,.055);
-  color:white;
-  border-radius:5px;
-  padding:12px 13px;
-  outline:none;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(198,161,91,.35);
+  color:var(--paper);
+  padding:12px 14px;
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:.92rem;
+  border-radius:var(--radius);
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder{
-  color:#7f8d9b;
+input::placeholder,
+textarea::placeholder{
+  color:#7c8499;
 }
 
-.form-group select option{
-  color:var(--navy);
+input:focus,
+select:focus,
+textarea:focus{
+  outline:2px solid var(--gold);
+  outline-offset:1px;
+  background:rgba(255,255,255,.07);
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-  border-color:var(--gold);
+select option{
+  background:var(--ink);
+  color:var(--paper);
 }
 
-.form-group textarea{
-  min-height:110px;
+textarea{
   resize:vertical;
+  min-height:110px;
 }
 
-.submit{
-  width:100%;
-  border:0;
+.submit-btn{
   background:var(--gold);
-  color:var(--navy);
-  padding:14px;
-  border-radius:5px;
-  font-weight:700;
-  margin-top:5px;
+  color:var(--ink);
+  border:none;
+  padding:14px 26px;
+  border-radius:var(--radius);
+  font-weight:600;
+  font-size:.92rem;
+  justify-self:start;
+  transition:background .2s ease,opacity .2s ease;
 }
 
-.submit:hover{
-  background:var(--gold-light);
+.submit-btn:hover{
+  background:var(--gold-soft);
 }
 
-.form-disclaimer{
-  color:#7f8d9b;
-  font-size:.7rem;
-  margin-top:13px;
-  line-height:1.5;
+.submit-btn:disabled{
+  opacity:.65;
+  cursor:not-allowed;
 }
 
-/* =========================
-   DISCLAIMER
-========================= */
-
-.disclaimer{
-  background:#eef1f2;
-  padding:35px 0;
-}
-
-.disclaimer-box{
-  border-left:3px solid var(--gold);
-  padding-left:20px;
-}
-
-.disclaimer-box h3{
-  font-size:1rem;
-  color:var(--navy);
-  margin-bottom:7px;
-}
-
-.disclaimer-box p{
-  color:var(--muted);
+.form-note{
   font-size:.76rem;
+  color:#8b93a8;
+}
+
+.form-success{
+  display:none;
+  padding:14px 16px;
+  border:1px solid rgba(198,161,91,.4);
+  background:rgba(198,161,91,.08);
+  color:var(--gold-soft);
+  font-size:.9rem;
+}
+
+@media(max-width:900px){
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:560px){
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
 }
 
 /* =========================
@@ -998,301 +895,103 @@ header{
 ========================= */
 
 footer{
-  background:#081522;
-  color:#8998a8;
-  padding:60px 0 25px;
+  background:#0e1830;
+  color:#9aa3ba;
+  padding:64px 0 28px;
+  font-size:.88rem;
 }
 
 .footer-grid{
   display:grid;
   grid-template-columns:1.4fr 1fr 1fr;
-  gap:60px;
-  padding-bottom:42px;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  gap:40px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(198,161,91,.2);
 }
 
-.footer-logo{
-  color:white;
-  font-family:"Playfair Display",serif;
-  font-size:1.2rem;
-  font-weight:700;
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--paper);
+  font-family:'Fraunces',serif;
+  font-size:1.05rem;
+  margin-bottom:12px;
 }
 
-.footer-tagline{
-  color:var(--gold-light);
-  margin-top:10px;
-  font-size:.84rem;
+.footer-brand svg{
+  width:26px;
+  height:26px;
 }
 
-.footer-description{
-  max-width:430px;
-  font-size:.76rem;
-  margin-top:15px;
-  line-height:1.7;
+.footer-tag{
+  color:var(--gold-soft);
+  font-size:.85rem;
+  margin-bottom:18px;
+  font-style:italic;
 }
 
-.footer-column h4{
-  color:var(--gold-light);
+.footer-legal{
+  color:#7c8499;
+  font-size:.82rem;
+  max-width:42ch;
+  line-height:1.6;
+}
+
+.footer-col h5{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
   text-transform:uppercase;
   letter-spacing:.1em;
-  font-size:.68rem;
+  color:var(--gold-soft);
   margin-bottom:16px;
 }
 
-.footer-column ul{
-  list-style:none;
-  display:grid;
-  gap:10px;
+.footer-col li{
+  margin-bottom:10px;
 }
 
-.footer-column a{
-  font-size:.8rem;
-}
-
-.footer-column a:hover{
-  color:white;
+.footer-col a:hover{
+  color:var(--paper);
 }
 
 .footer-bottom{
-  padding-top:23px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:20px;
   flex-wrap:wrap;
-  font-size:.7rem;
-}
-
-/* =========================
-   FLOATING BUTTONS
-========================= */
-
-.floating-actions{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:900;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.float-btn{
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  box-shadow:0 8px 25px rgba(0,0,0,.2);
-  color:white;
-  font-weight:700;
+  gap:12px;
+  padding-top:24px;
   font-size:.78rem;
-}
-
-.float-call{
-  background:var(--navy);
-}
-
-.float-whatsapp{
-  background:#16805b;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:1000px){
-
-  .nav-links{
-    gap:18px;
-  }
-
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:45px;
-  }
-
-  .service-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .why-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .faq-layout{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
+  color:#6b7388;
 }
 
 @media(max-width:760px){
 
-  section{
-    padding:65px 0;
-  }
-
-  .container{
-    width:min(var(--max),calc(100% - 30px));
-  }
-
-  .topbar{
-    display:none;
-  }
-
-  .nav{
-    height:70px;
-  }
-
-  .menu-button{
-    display:block;
-  }
-
-  .nav-links{
-    position:fixed;
-    left:0;
-    right:0;
-    top:70px;
-    background:var(--cream);
-    border-bottom:1px solid var(--border);
-    padding:25px 20px 30px;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:20px;
-    transform:translateY(-130%);
-    transition:.3s ease;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-  }
-
-  .nav-links.open{
-    transform:translateY(0);
-  }
-
-  .nav-links .nav-button{
-    width:100%;
-    text-align:center;
-  }
-
-  .hero{
-    padding:65px 0;
-  }
-
-  .hero h1{
-    font-size:clamp(2.45rem,12vw,4rem);
-  }
-
-  .hero-card{
-    padding:30px;
-  }
-
-  .services-head{
-    display:block;
-  }
-
-  .service-grid{
-    grid-template-columns:1fr;
-  }
-
-  .process-grid{
-    grid-template-columns:1fr;
-  }
-
-  .why-grid{
-    grid-template-columns:1fr;
-  }
-
-  .about-points{
-    grid-template-columns:1fr;
-  }
-
-  .about-visual{
-    min-height:330px;
-  }
-
-  .contact-form{
-    padding:25px 20px;
-  }
-
-  .form-row{
-    grid-template-columns:1fr;
-    gap:0;
-  }
-
   .footer-grid{
     grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .footer-bottom{
-    display:block;
-  }
-
-  .footer-bottom span{
-    display:block;
-    margin-bottom:8px;
-  }
-
-  .floating-actions{
-    right:14px;
-    bottom:14px;
   }
 }
 
-@media(max-width:430px){
+/* =========================
+   ANIMATION
+========================= */
 
-  .logo-main{
-    font-size:.94rem;
-  }
-
-  .logo-sub{
-    font-size:.56rem;
-  }
-
-  .logo-mark{
-    width:37px;
-    height:37px;
-  }
-
-  .hero-card h2{
-    font-size:1.65rem;
-  }
-
-  .buttons{
-    flex-direction:column;
-  }
-
-  .btn{
-    width:100%;
-  }
+.fade-up{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .6s ease,transform .6s ease;
 }
+
+.fade-up.in{
+  opacity:1;
+  transform:translateY(0);
+}
+
 </style>
 </head>
 
 <body>
-
-<!-- =========================
-     TOP BAR
-========================= -->
-
-<div class="topbar">
-  <div class="container topbar-inner">
-    <span>Professional Financial Assistance &amp; Guidance</span>
-
-    <div class="topbar-right">
-      <a href="#contact">Request a Callback</a>
-      <a href="#contact">Contact Us</a>
-    </div>
-  </div>
-</div>
 
 <!-- =========================
      HEADER
@@ -1300,310 +999,383 @@ footer{
 
 <header>
 
-  <nav class="container nav">
+<nav class="nav">
 
-    <a href="#home" class="logo">
+<a href="#top" class="brand">
 
-      <div class="logo-mark"></div>
+<svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
 
-      <div class="logo-text">
-        <span class="logo-main">Star Bridge Finance</span>
-        <span class="logo-sub">Financial Solution</span>
-      </div>
+<path
+d="M4 26C4 26 12 14 20 14C28 14 36 26 36 26"
+stroke="#c6a15b"
+stroke-width="1.6"/>
 
-    </a>
+<path
+d="M9 26V19M15 26V16M20 26V14M25 26V16M31 26V19"
+stroke="#132038"
+stroke-width="1.3"/>
 
-    <button class="menu-button" id="menuButton" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<circle
+cx="20"
+cy="7"
+r="2"
+fill="#c6a15b"/>
 
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#process">How It Works</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact" class="nav-button">Get a Callback</a></li>
-    </ul>
+</svg>
 
-  </nav>
+<span class="brand-name">Star Bridge Finance</span>
+
+</a>
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#process">How It Works</a>
+</li>
+
+<li>
+<a href="#faq">FAQ</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+<li>
+<a href="#contact" class="nav-cta">Get a Call Back</a>
+</li>
+
+</ul>
+
+<button
+class="nav-toggle"
+id="navToggle"
+aria-label="Toggle menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</nav>
 
 </header>
+
+
+<main id="top">
 
 <!-- =========================
      HERO
 ========================= -->
 
-<main>
+<section class="hero">
 
-<section class="hero" id="home">
+<div class="wrap hero-grid">
 
-  <div class="container hero-grid">
+<div>
 
-    <div>
+<span class="eyebrow">
+Financial Guidance, Simplified
+</span>
 
-      <span class="section-label">
-        Financial Guidance, Simplified
-      </span>
+<h1>
+Financial solutions,
+<em>made simple</em>.
+</h1>
 
-      <h1>
-        Your financial goals.
-        <span>Our guidance.</span>
-      </h1>
+<p class="hero-sub">
 
-      <p class="hero-description">
-        Star Bridge Finance Solution helps individuals, self-employed applicants
-        and eligible businesses explore suitable financial options through
-        professional assistance, clear communication and a customer-focused process.
-      </p>
+At Star Bridge Finance Solution, we help individuals,
+self-employed applicants and businesses explore suitable
+financial options through professional guidance,
+transparent communication and customer-focused assistance.
 
-      <div class="buttons">
+</p>
 
-        <a href="#contact" class="btn btn-primary">
-          Get Started →
-        </a>
+<div class="btn-row">
 
-        <a href="#services" class="btn btn-secondary">
-          Explore Services
-        </a>
+<a href="#contact" class="btn btn-primary">
+Get Started
+</a>
 
-      </div>
+<a href="#services" class="btn btn-ghost">
+Explore Our Services
+</a>
 
-      <div class="hero-note">
-        No guarantee of approval. Final decisions are made by the respective lender.
-      </div>
+</div>
 
-    </div>
+</div>
 
 
-    <div class="hero-card">
+<div class="hero-panel">
 
-      <span class="card-label">
-        A simpler way forward
-      </span>
+<span class="tag">
+Your needs. Your goals. Your journey.
+</span>
 
-      <h2>
-        Understand your options before you decide.
-      </h2>
+<h3>
+Finding the right financial option doesn't have to be complicated.
+</h3>
 
-      <p>
-        We help you understand the enquiry process, documentation,
-        eligibility considerations and the next steps involved in exploring
-        financial solutions.
-      </p>
+<p>
 
-      <ul class="feature-list">
+Our team helps you understand the process,
+documentation and available options so that
+you can make informed financial decisions.
 
-        <li>Personal finance assistance</li>
-        <li>Business finance assistance</li>
-        <li>MSME finance assistance</li>
-        <li>Loan application guidance</li>
-        <li>Documentation guidance</li>
+</p>
 
-      </ul>
+<div class="service-pills">
 
-    </div>
+<span>Personal Finance</span>
+<span>Business Finance</span>
+<span>MSME Finance</span>
+<span>Loan Assistance</span>
 
-  </div>
+</div>
+
+</div>
+
+</div>
 
 </section>
+
+
+<!-- BRIDGE -->
+
+<svg
+class="bridge-divider"
+viewBox="0 0 1180 64"
+preserveAspectRatio="none">
+
+<path
+class="deck"
+d="M0 40 H1180"/>
+
+<path
+d="M0 40 Q295 -10 590 40 Q885 90 1180 40"/>
+
+</svg>
 
 
 <!-- =========================
      SERVICES
 ========================= -->
 
-<section class="services" id="services">
+<section id="services">
 
-  <div class="container">
+<div class="wrap">
 
-    <div class="services-head">
+<span class="eyebrow">
+Our Key Services
+</span>
 
-      <div>
+<h2
+style="font-size:clamp(1.7rem,3vw,2.3rem);margin-top:16px;max-width:20ch;">
 
-        <span class="section-label">
-          Our Services
-        </span>
+Guidance across every financial requirement
 
-        <h2 class="section-title">
-          Financial assistance for different requirements
-        </h2>
+</h2>
 
-      </div>
-
-      <p class="section-text">
-        Our role is to help you understand available financial options and
-        guide you through the enquiry and application journey, subject to
-        applicable eligibility criteria and lender policies.
-      </p>
-
-    </div>
+</div>
 
 
-    <div class="service-grid">
+<div class="wrap">
 
-      <article class="service-card">
-
-        <span class="service-number">01</span>
-
-        <div class="service-icon">PF</div>
-
-        <h3>Personal Finance</h3>
-
-        <p>
-          Assistance for individuals exploring suitable financing options
-          for personal requirements.
-        </p>
-
-        <a href="#contact" class="service-link">
-          Discuss Your Requirement →
-        </a>
-
-      </article>
+<div class="services-grid">
 
 
-      <article class="service-card">
+<div class="service-card fade-up">
 
-        <span class="service-number">02</span>
+<span class="num">01</span>
 
-        <div class="service-icon">BF</div>
+<h3>
+Personal Finance Solutions
+</h3>
 
-        <h3>Business Finance</h3>
+<p>
+Explore financial options for personal requirements,
+subject to applicable eligibility criteria and lender policies.
+</p>
 
-        <p>
-          Assistance for eligible businesses exploring funding options for
-          working capital, expansion and other business requirements.
-        </p>
+<a href="#contact">
+Learn More →
+</a>
 
-        <a href="#contact" class="service-link">
-          Discuss Your Requirement →
-        </a>
-
-      </article>
-
-
-      <article class="service-card">
-
-        <span class="service-number">03</span>
-
-        <div class="service-icon">MS</div>
-
-        <h3>MSME Finance</h3>
-
-        <p>
-          Guidance for eligible small and medium-sized businesses
-          considering appropriate financing options.
-        </p>
-
-        <a href="#contact" class="service-link">
-          Discuss Your Requirement →
-        </a>
-
-      </article>
+</div>
 
 
-      <article class="service-card">
+<div class="service-card fade-up">
 
-        <span class="service-number">04</span>
+<span class="num">02</span>
 
-        <div class="service-icon">LA</div>
+<h3>
+Business Finance Solutions
+</h3>
 
-        <h3>Loan Assistance</h3>
+<p>
+Assistance for eligible businesses exploring funding
+options for working capital, expansion and other
+business requirements.
+</p>
 
-        <p>
-          Support in understanding documentation, application requirements
-          and the next steps in the financing process.
-        </p>
+<a href="#contact">
+Learn More →
+</a>
 
-        <a href="#contact" class="service-link">
-          Request Assistance →
-        </a>
+</div>
 
-      </article>
 
-    </div>
+<div class="service-card fade-up">
 
-  </div>
+<span class="num">03</span>
+
+<h3>
+Loan Assistance
+</h3>
+
+<p>
+Professional assistance in understanding the
+application process, documentation and available
+financial options.
+</p>
+
+<a href="#contact">
+Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card fade-up">
+
+<span class="num">04</span>
+
+<h3>
+MSME Finance
+</h3>
+
+<p>
+Financial solutions designed to support eligible
+small and medium-sized businesses with their
+financial requirements.
+</p>
+
+<a href="#contact">
+Learn More →
+</a>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
-     ABOUT
+     WHY STAR BRIDGE
 ========================= -->
 
-<section class="about" id="about">
+<section class="why">
 
-  <div class="container about-grid">
+<div class="wrap">
 
-    <div class="about-visual">
+<span class="eyebrow">
+Why Star Bridge
+</span>
 
-      <div class="visual-content">
+<h2
+style="font-size:clamp(1.7rem,3vw,2.3rem);margin-top:16px;max-width:22ch;">
 
-        <div class="visual-big">SB</div>
+More than an enquiry — a bridge you can trust
 
-        <p class="visual-small">
-          Building a clear bridge between your financial requirement
-          and the next step.
-        </p>
-
-      </div>
-
-    </div>
+</h2>
 
 
-    <div class="about-copy">
+<div class="why-grid">
 
-      <span class="section-label">
-        About Star Bridge
-      </span>
 
-      <h2 class="section-title">
-        Guidance that puts understanding first.
-      </h2>
+<div class="why-item">
 
-      <p>
-        Financial decisions can involve documentation, eligibility
-        requirements, lender policies and multiple steps. Our objective is
-        to make that journey easier to understand.
-      </p>
+<h4>
+Simple & Transparent
+</h4>
 
-      <p>
-        Star Bridge Finance Solution provides assistance and guidance to
-        customers exploring financial options. We focus on clear
-        communication and helping customers understand the process before
-        making financial decisions.
-      </p>
+<p>
+We explain processes, requirements and important
+terms in a straightforward manner.
+</p>
 
-      <div class="about-points">
+</div>
 
-        <div class="about-point">
-          <strong>Clear Communication</strong>
-          <span>Understand the process and requirements.</span>
-        </div>
 
-        <div class="about-point">
-          <strong>Customer Focus</strong>
-          <span>We first understand your requirement.</span>
-        </div>
+<div class="why-item">
 
-        <div class="about-point">
-          <strong>Professional Assistance</strong>
-          <span>Support through the enquiry journey.</span>
-        </div>
+<h4>
+Customer Focused
+</h4>
 
-        <div class="about-point">
-          <strong>Responsible Guidance</strong>
-          <span>Understand terms before accepting a product.</span>
-        </div>
+<p>
+Every requirement is different. We take the time
+to understand yours before we guide you.
+</p>
 
-      </div>
+</div>
 
-    </div>
 
-  </div>
+<div class="why-item">
+
+<h4>
+Professional Assistance
+</h4>
+
+<p>
+Our team supports you throughout the enquiry
+and application journey.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<h4>
+Convenient Process
+</h4>
+
+<p>
+We aim to make the financial assistance process
+simple, organized and easy to follow.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<h4>
+Responsible Guidance
+</h4>
+
+<p>
+We encourage you to understand terms, charges
+and repayment obligations before accepting any product.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1612,146 +1384,226 @@ footer{
      PROCESS
 ========================= -->
 
-<section class="process" id="process">
+<section id="process">
 
-  <div class="container">
+<div class="wrap">
 
-    <span class="section-label">
-      How It Works
-    </span>
+<span class="eyebrow">
+How It Works
+</span>
 
-    <h2 class="section-title">
-      A simple process from enquiry to decision
-    </h2>
+<h2
+style="font-size:clamp(1.7rem,3vw,2.3rem);margin-top:16px;max-width:20ch;">
 
-    <p class="section-text">
-      The exact process, documents, timelines and final outcome may vary
-      depending on the product, applicant profile and respective lender.
-    </p>
+Six steps from enquiry to decision
+
+</h2>
 
 
-    <div class="process-grid">
+<div class="process-list">
 
-      <div class="process-card">
-        <span class="process-no">01</span>
-        <h3>Submit Enquiry</h3>
-        <p>
-          Share your basic requirement and contact details with our team.
-        </p>
-      </div>
 
-      <div class="process-card">
-        <span class="process-no">02</span>
-        <h3>Requirement Review</h3>
-        <p>
-          We understand your requirement and discuss potentially suitable
-          financial options.
-        </p>
-      </div>
+<div class="process-item">
 
-      <div class="process-card">
-        <span class="process-no">03</span>
-        <h3>Documentation</h3>
-        <p>
-          We explain the documents and information that may be required.
-        </p>
-      </div>
+<span class="step-num">01</span>
 
-      <div class="process-card">
-        <span class="process-no">04</span>
-        <h3>Application Assistance</h3>
-        <p>
-          We assist with the application process and explain the next steps.
-        </p>
-      </div>
+<div>
 
-      <div class="process-card">
-        <span class="process-no">05</span>
-        <h3>Lender Assessment</h3>
-        <p>
-          The respective lender evaluates the application according to
-          its own policies and eligibility criteria.
-        </p>
-      </div>
+<h4>
+Submit Your Enquiry
+</h4>
 
-      <div class="process-card">
-        <span class="process-no">06</span>
-        <h3>Final Decision</h3>
-        <p>
-          Approval, amount, rate, tenure and other terms are determined
-          by the respective lender.
-        </p>
-      </div>
+<p>
+Share your basic requirement with our team online or by phone.
+</p>
 
-    </div>
+</div>
 
-  </div>
+</div>
+
+
+<div class="process-item">
+
+<span class="step-num">02</span>
+
+<div>
+
+<h4>
+Requirement Assessment
+</h4>
+
+<p>
+We understand your financial requirement and discuss
+potentially suitable options.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<span class="step-num">03</span>
+
+<div>
+
+<h4>
+Documentation
+</h4>
+
+<p>
+We guide you regarding documents and information
+that may be required.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<span class="step-num">04</span>
+
+<div>
+
+<h4>
+Application Assistance
+</h4>
+
+<p>
+We assist with the application process and help you
+understand the next steps.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<span class="step-num">05</span>
+
+<div>
+
+<h4>
+Lender Assessment
+</h4>
+
+<p>
+The respective lender or financial institution evaluates
+the application according to its own policies and
+eligibility criteria.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="process-item">
+
+<span class="step-num">06</span>
+
+<div>
+
+<h4>
+Final Decision
+</h4>
+
+<p>
+Approval, interest rate, loan amount, tenure and
+other terms are determined by the respective lender.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
-     WHY CHOOSE US
+     CUSTOMER EXPERIENCES
 ========================= -->
 
-<section class="why">
+<section class="testimonials">
 
-  <div class="container">
+<div class="wrap">
 
-    <span class="section-label">
-      Why Star Bridge
-    </span>
+<span class="eyebrow">
+Customer Experiences
+</span>
 
-    <h2 class="section-title">
-      A customer-first approach to financial assistance
-    </h2>
+<h2
+style="font-size:clamp(1.7rem,3vw,2.3rem);margin-top:16px;">
 
-    <p class="section-text">
-      We believe customers should understand what they are considering
-      before making an important financial decision.
-    </p>
+What our customers say
+
+</h2>
 
 
-    <div class="why-grid">
+<div class="test-grid">
 
-      <div class="why-card">
-        <h3>Simple</h3>
-        <p>
-          We aim to explain the process in straightforward language.
-        </p>
-      </div>
 
-      <div class="why-card">
-        <h3>Transparent</h3>
-        <p>
-          We encourage customers to understand applicable terms and charges.
-        </p>
-      </div>
+<div class="test-card">
 
-      <div class="why-card">
-        <h3>Professional</h3>
-        <p>
-          Structured assistance throughout the enquiry process.
-        </p>
-      </div>
+<span class="mark">"</span>
 
-      <div class="why-card">
-        <h3>Convenient</h3>
-        <p>
-          A clear process designed to make enquiries easier to manage.
-        </p>
-      </div>
+<p class="quote">
+The team explained the process clearly and helped me
+understand the documentation requirements.
+</p>
 
-      <div class="why-card">
-        <h3>Responsible</h3>
-        <p>
-          No promises of guaranteed approval or guaranteed financial outcomes.
-        </p>
-      </div>
+<p class="who">
+— Customer
+</p>
 
-    </div>
+</div>
 
-  </div>
+
+<div class="test-card">
+
+<span class="mark">"</span>
+
+<p class="quote">
+Professional communication and helpful guidance
+throughout the process.
+</p>
+
+<p class="who">
+— Customer
+</p>
+
+</div>
+
+
+<div class="test-card">
+
+<span class="mark">"</span>
+
+<p class="quote">
+The process was easy to understand and the team
+was available whenever I had questions.
+</p>
+
+<p class="who">
+— Customer
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1760,139 +1612,166 @@ footer{
      FAQ
 ========================= -->
 
-<section class="faq" id="faq">
+<section id="faq">
 
-  <div class="container faq-layout">
+<div class="wrap">
 
-    <div>
+<span class="eyebrow">
+Frequently Asked Questions
+</span>
 
-      <span class="section-label">
-        Frequently Asked Questions
-      </span>
+<h2
+style="font-size:clamp(1.7rem,3vw,2.3rem);margin-top:16px;">
 
-      <h2 class="section-title">
-        Questions customers often ask
-      </h2>
+Good to know before you begin
 
-      <p class="section-text">
-        If you still have a question, contact us and our team can explain
-        the relevant process and requirements.
-      </p>
-
-    </div>
+</h2>
 
 
-    <div class="faq-list">
-
-      <div class="faq-item">
-
-        <button class="faq-question">
-          What does Star Bridge Finance Solution do?
-          <span class="faq-plus">+</span>
-        </button>
-
-        <div class="faq-answer">
-          <p>
-            We provide financial assistance and guidance to help individuals
-            and eligible businesses explore suitable financial options.
-          </p>
-        </div>
-
-      </div>
+<div class="faq-list" id="faqList">
 
 
-      <div class="faq-item">
+<div class="faq-item">
 
-        <button class="faq-question">
-          Do you guarantee loan approval?
-          <span class="faq-plus">+</span>
-        </button>
+<button class="faq-q">
 
-        <div class="faq-answer">
-          <p>
-            No. We do not guarantee approval. Final approval is determined
-            by the respective lender based on its eligibility criteria,
-            assessment and policies.
-          </p>
-        </div>
+What does Star Bridge Finance Solution do?
 
-      </div>
+<span class="plus">+</span>
 
+</button>
 
-      <div class="faq-item">
+<div class="faq-a">
 
-        <button class="faq-question">
-          What interest rate will I receive?
-          <span class="faq-plus">+</span>
-        </button>
+<p>
+We provide financial assistance and guidance to help
+individuals and businesses explore suitable financial options.
+</p>
 
-        <div class="faq-answer">
-          <p>
-            Interest rates and applicable charges are determined by the
-            respective lender based on its policies and the applicant's
-            profile.
-          </p>
-        </div>
+</div>
 
-      </div>
+</div>
 
 
-      <div class="faq-item">
+<div class="faq-item">
 
-        <button class="faq-question">
-          What documents may be required?
-          <span class="faq-plus">+</span>
-        </button>
+<button class="faq-q">
 
-        <div class="faq-answer">
-          <p>
-            Requirements vary by product and applicant profile. Documents
-            may include identity proof, address proof, PAN, bank statements
-            and income or business-related documents.
-          </p>
-        </div>
+Do you guarantee loan approval?
 
-      </div>
+<span class="plus">+</span>
 
+</button>
 
-      <div class="faq-item">
+<div class="faq-a">
 
-        <button class="faq-question">
-          Can self-employed people or businesses enquire?
-          <span class="faq-plus">+</span>
-        </button>
+<p>
+No. We do not guarantee approval. Final approval is
+determined by the respective lender or financial institution
+based on its eligibility criteria, assessment and policies.
+</p>
 
-        <div class="faq-answer">
-          <p>
-            Yes. Eligible self-employed applicants and businesses may
-            explore applicable financing options, subject to lender
-            criteria and documentation requirements.
-          </p>
-        </div>
+</div>
 
-      </div>
+</div>
 
 
-      <div class="faq-item">
+<div class="faq-item">
 
-        <button class="faq-question">
-          Does submitting an enquiry guarantee a loan?
-          <span class="faq-plus">+</span>
-        </button>
+<button class="faq-q">
 
-        <div class="faq-answer">
-          <p>
-            No. An enquiry does not guarantee approval or disbursement.
-            The outcome depends on the product, applicant profile,
-            documentation and respective lender's assessment.
-          </p>
-        </div>
+What interest rate will I receive?
 
-      </div>
+<span class="plus">+</span>
 
-    </div>
+</button>
 
-  </div>
+<div class="faq-a">
+
+<p>
+Interest rates and other applicable charges are determined
+by the respective lender or financial institution based on
+its policies and the applicant profile.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-q">
+
+What documents do I need?
+
+<span class="plus">+</span>
+
+</button>
+
+<div class="faq-a">
+
+<p>
+Documentation depends on the financial product and applicant
+profile. Common documents may include identity proof,
+address proof, PAN, bank statements and income or
+business documents.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-q">
+
+Can self-employed people or businesses apply?
+
+<span class="plus">+</span>
+
+</button>
+
+<div class="faq-a">
+
+<p>
+Self-employed applicants and eligible businesses may explore
+financing options, subject to the applicable lender's criteria
+and documentation requirements.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button class="faq-q">
+
+Does submitting an enquiry guarantee a loan?
+
+<span class="plus">+</span>
+
+</button>
+
+<div class="faq-a">
+
+<p>
+No. An enquiry or application does not guarantee approval
+or disbursement. Processing time and outcome vary by
+product, documentation and lender.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
@@ -1901,278 +1780,287 @@ footer{
      CONTACT
 ========================= -->
 
-<section class="contact" id="contact">
+<section id="contact" class="contact">
 
-  <div class="container">
+<div class="wrap contact-grid">
 
-    <span class="section-label">
-      Get In Touch
-    </span>
 
-    <h2 class="section-title">
-      Let's discuss your requirement.
-    </h2>
+<!-- BUSINESS INFORMATION -->
 
+<div class="contact-info">
 
-    <div class="contact-grid">
+<span class="eyebrow">
+Get In Touch
+</span>
 
-      <div>
+<h2
+style="font-size:clamp(1.7rem,3vw,2.3rem);margin-top:16px;margin-bottom:16px;">
 
-        <p class="contact-copy">
-          Have a financial requirement? Share some basic information with us.
-          Our team can contact you to understand your requirement and explain
-          the next steps.
-        </p>
+Let's find the right way forward
 
+</h2>
 
-        <div class="contact-details">
+<p>
 
-          <!-- Replace these details with your actual business details -->
+Have a financial requirement?
+Talk to Star Bridge Finance Solution and understand
+your available options — no obligation, no pressure.
 
-          <div class="contact-detail">
+</p>
 
-            <div class="contact-detail-icon">☎</div>
 
-            <div>
-              <small>Phone</small>
-              <a href="#" id="phoneLink">
-                Add your phone number
-              </a>
-            </div>
+<div class="info-row">
 
-          </div>
+<span class="label">
+Name
+</span>
 
+<span>
+Subodh Kumar
+</span>
 
-          <div class="contact-detail">
+</div>
 
-            <div class="contact-detail-icon">W</div>
 
-            <div>
-              <small>WhatsApp</small>
-              <a href="#" id="whatsappLink" target="_blank">
-                Chat with us on WhatsApp
-              </a>
-            </div>
+<div class="info-row">
 
-          </div>
+<span class="label">
+Phone
+</span>
 
+<span>
 
-          <div class="contact-detail">
+<a href="tel:+919110076215">
+9110076215
+</a>
 
-            <div class="contact-detail-icon">@</div>
+</span>
 
-            <div>
-              <small>Email</small>
-              <a href="#" id="emailLink">
-                Add your business email
-              </a>
-            </div>
+</div>
 
-          </div>
 
+<div class="info-row">
 
-          <div class="contact-detail">
+<span class="label">
+Email
+</span>
 
-            <div class="contact-detail-icon">⌂</div>
+<span>
 
-            <div>
-              <small>Business Hours</small>
-              <span>Monday – Saturday | 9:00 AM – 6:00 PM</span>
-            </div>
+<a href="mailto:subodhkumarshg838@gmail.com">
+subodhkumarshg838@gmail.com
+</a>
 
-          </div>
+</span>
 
-        </div>
+</div>
 
-      </div>
 
+<div class="info-row">
 
-      <!-- ENQUIRY FORM -->
+<span class="label">
+Location
+</span>
 
-      <div class="contact-form">
+<span>
+Greater Noida, India
+</span>
 
-        <h3>Request a Callback</h3>
+</div>
 
-        <p class="form-intro">
-          Enter your details and requirement. Your email application will
-          open with the enquiry information prepared for sending.
-        </p>
 
+<div class="info-row">
 
-        <form id="enquiryForm">
+<span class="label">
+Hours
+</span>
 
-          <div class="form-row">
+<span>
+Mon–Sat, 9:00 AM–6:00 PM
+</span>
 
-            <div class="form-group">
+</div>
 
-              <label for="name">
-                Full Name *
-              </label>
 
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Enter your full name"
-                required
-              >
+<p class="disclaimer-note">
 
-            </div>
+Submitting an enquiry does not guarantee loan approval,
+eligibility or financial assistance. Final terms are
+determined solely by the respective lender.
 
+</p>
 
-            <div class="form-group">
+</div>
 
-              <label for="mobile">
-                Mobile Number *
-              </label>
 
-              <input
-                id="mobile"
-                name="mobile"
-                type="tel"
-                placeholder="10-digit mobile number"
-                pattern="[0-9]{10}"
-                maxlength="10"
-                required
-              >
+<!-- CUSTOMER FORM -->
 
-            </div>
+<div>
 
-          </div>
+<form id="enquiryForm">
 
 
-          <div class="form-row">
+<div class="form-row">
 
-            <div class="form-group">
+<div>
 
-              <label for="email">
-                Email Address
-              </label>
+<label for="fname">
+Full Name *
+</label>
 
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="you@example.com"
-              >
+<input
+id="fname"
+name="name"
+type="text"
+placeholder="Enter your full name"
+required>
 
-            </div>
+</div>
 
 
-            <div class="form-group">
+<div>
 
-              <label for="city">
-                City
-              </label>
+<label for="fmobile">
+Mobile Number *
+</label>
 
-              <input
-                id="city"
-                name="city"
-                type="text"
-                placeholder="Your city"
-              >
+<input
+id="fmobile"
+name="mobile"
+type="tel"
+placeholder="10-digit mobile number"
+pattern="[0-9]{10}"
+maxlength="10"
+required>
 
-            </div>
+</div>
 
-          </div>
+</div>
 
 
-          <div class="form-group">
+<div class="form-row">
 
-            <label for="service">
-              Requirement
-            </label>
+<div>
 
-            <select id="service" name="service">
+<label for="femail">
+Email Address *
+</label>
 
-              <option value="Personal Finance">
-                Personal Finance
-              </option>
+<input
+id="femail"
+name="email"
+type="email"
+placeholder="you@example.com"
+required>
 
-              <option value="Business Finance">
-                Business Finance
-              </option>
+</div>
 
-              <option value="MSME Finance">
-                MSME Finance
-              </option>
 
-              <option value="Loan Assistance">
-                Loan Assistance
-              </option>
+<div>
 
-              <option value="Other">
-                Other
-              </option>
+<label for="fcity">
+City *
+</label>
 
-            </select>
+<input
+id="fcity"
+name="city"
+type="text"
+placeholder="Your city"
+required>
 
-          </div>
+</div>
 
+</div>
 
-          <div class="form-group">
 
-            <label for="message">
-              Requirement Details
-            </label>
+<div>
 
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Briefly describe your requirement"
-            ></textarea>
+<label for="fservice">
+Financial Solution Required *
+</label>
 
-          </div>
+<select
+id="fservice"
+name="service"
+required>
 
+<option value="">
+Select a financial solution
+</option>
 
-          <button type="submit" class="submit">
-            Submit Enquiry →
-          </button>
+<option value="Personal Finance">
+Personal Finance
+</option>
 
+<option value="Business Finance">
+Business Finance
+</option>
 
-          <p class="form-disclaimer">
-            By submitting this form, you agree to be contacted regarding
-            your enquiry. Submission does not guarantee loan approval,
-            eligibility, sanction or disbursement.
-          </p>
+<option value="MSME Finance">
+MSME Finance
+</option>
 
-        </form>
+<option value="Loan Assistance">
+Loan Assistance
+</option>
 
-      </div>
+<option value="Other Financial Solution">
+Other Financial Solution
+</option>
 
-    </div>
+</select>
 
-  </div>
+</div>
 
-</section>
 
+<div>
 
-<!-- =========================
-     DISCLAIMER
-========================= -->
+<label for="fmessage">
+Your Requirement
+</label>
 
-<section class="disclaimer">
+<textarea
+id="fmessage"
+name="message"
+placeholder="Tell us briefly about your financial requirement"></textarea>
 
-  <div class="container">
+</div>
 
-    <div class="disclaimer-box">
 
-      <h3>Important Disclaimer</h3>
+<div
+class="form-success"
+id="formSuccess">
 
-      <p>
-        Star Bridge Finance Solution provides financial assistance and
-        guidance. We do not guarantee loan approval, loan amount,
-        interest rate, tenure, eligibility or disbursement. All financial
-        products and services are subject to applicable eligibility,
-        documentation, credit assessment, terms and policies of the
-        respective lender or financial institution. Customers should
-        independently review all applicable terms, charges and repayment
-        obligations before accepting any financial product.
-      </p>
+Thank you! Your enquiry has been submitted successfully.
+Our team will contact you shortly.
 
-    </div>
+</div>
 
-  </div>
+
+<button
+type="submit"
+class="submit-btn">
+
+Submit Enquiry
+
+</button>
+
+
+<p class="form-note">
+
+By submitting this form, you agree to be contacted
+regarding your enquiry. Your information will be used
+for the purpose of responding to your request.
+
+</p>
+
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
@@ -2185,401 +2073,471 @@ footer{
 
 <footer>
 
-  <div class="container">
+<div class="wrap">
 
-    <div class="footer-grid">
-
-      <div>
-
-        <div class="footer-logo">
-          Star Bridge Finance Solution
-        </div>
-
-        <div class="footer-tagline">
-          Your Financial Goals. Our Guidance.
-        </div>
-
-        <p class="footer-description">
-          Professional financial assistance and guidance for individuals,
-          self-employed applicants and eligible businesses exploring
-          suitable financial options.
-        </p>
-
-      </div>
+<div class="footer-grid">
 
 
-      <div class="footer-column">
+<div>
 
-        <h4>Quick Links</h4>
+<div class="footer-brand">
 
-        <ul>
+<svg viewBox="0 0 40 40" fill="none">
 
-          <li>
-            <a href="#home">Home</a>
-          </li>
+<path
+d="M4 26C4 26 12 14 20 14C28 14 36 26 36 26"
+stroke="#c6a15b"
+stroke-width="1.6"/>
 
-          <li>
-            <a href="#services">Services</a>
-          </li>
+<path
+d="M9 26V19M15 26V16M20 26V14M25 26V16M31 26V19"
+stroke="#faf8f4"
+stroke-width="1.1"/>
 
-          <li>
-            <a href="#about">About Us</a>
-          </li>
+<circle
+cx="20"
+cy="7"
+r="2"
+fill="#c6a15b"/>
 
-          <li>
-            <a href="#process">How It Works</a>
-          </li>
+</svg>
 
-          <li>
-            <a href="#faq">FAQ</a>
-          </li>
-
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h4>Services</h4>
-
-        <ul>
-
-          <li>
-            <a href="#services">Personal Finance</a>
-          </li>
-
-          <li>
-            <a href="#services">Business Finance</a>
-          </li>
-
-          <li>
-            <a href="#services">MSME Finance</a>
-          </li>
-
-          <li>
-            <a href="#services">Loan Assistance</a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-      <span>
-        © 2026 Star Bridge Finance Solution. All Rights Reserved.
-      </span>
-
-      <span>
-        Financial assistance subject to applicable eligibility and lender policies.
-      </span>
-
-    </div>
-
-  </div>
-
-</footer>
-
-
-<!-- =========================
-     FLOATING ACTION BUTTONS
-========================= -->
-
-<div class="floating-actions">
-
-  <a
-    href="#"
-    id="floatingWhatsapp"
-    class="float-btn float-whatsapp"
-    target="_blank"
-    aria-label="WhatsApp"
-    title="WhatsApp"
-  >
-    WA
-  </a>
-
-  <a
-    href="#"
-    id="floatingCall"
-    class="float-btn float-call"
-    aria-label="Call"
-    title="Call"
-  >
-    ☎
-  </a>
+Star Bridge Finance Solution
 
 </div>
 
 
+<p class="footer-tag">
+
+Your Financial Goals. Our Guidance.
+One Trusted Bridge.
+
+</p>
+
+
+<p class="footer-legal">
+
+Star Bridge Finance Solution provides financial assistance
+and guidance. We do not guarantee approval, loan amount,
+interest rate, tenure or disbursement. All financial products
+are subject to eligibility, documentation, credit assessment
+and the policies of the respective lender.
+
+</p>
+
+</div>
+
+
+<div class="footer-col">
+
+<h5>
+Quick Links
+</h5>
+
+<ul>
+
+<li>
+<a href="#top">Home</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#process">How It Works</a>
+</li>
+
+<li>
+<a href="#faq">FAQ</a>
+</li>
+
+<li>
+<a href="#contact">Contact Us</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="footer-col">
+
+<h5>
+Contact
+</h5>
+
+<ul>
+
+<li>
+<a href="tel:+919110076215">
+9110076215
+</a>
+</li>
+
+<li>
+<a href="mailto:subodhkumarshg838@gmail.com">
+Email Us
+</a>
+</li>
+
+<li>
+Greater Noida, India
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>
+© 2026 Star Bridge Finance Solution. All Rights Reserved.
+</span>
+
+<span>
+Star Bridge does not ask for payments to unofficial individuals.
+Verify instructions via official channels only.
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
 <script>
 
-/* =========================================================
-   BUSINESS DETAILS
-   =========================================================
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
 
-   IMPORTANT:
-   Replace ONLY the values below with your actual details.
-
-   Example:
-
-   const BUSINESS_PHONE = "+9110076215";
-   const BUSINESS_WHATSAPP = "+9110076215";
-   const BUSINESS_EMAIL = "subodhkumarshg838@gamil.com";
-
-   ========================================================= */
-
-const BUSINESS_PHONE = "";
-const BUSINESS_WHATSAPP = "";
-const BUSINESS_EMAIL = "";
-
-
-/* =========================================================
-   SET CONTACT LINKS
-   ========================================================= */
-
-const phoneLink = document.getElementById("phoneLink");
-const whatsappLink = document.getElementById("whatsappLink");
-const emailLink = document.getElementById("emailLink");
-
-const floatingWhatsapp = document.getElementById("floatingWhatsapp");
-const floatingCall = document.getElementById("floatingCall");
-
-
-if(BUSINESS_PHONE){
-
-  phoneLink.textContent = BUSINESS_PHONE;
-  phoneLink.href = "tel:" + BUSINESS_PHONE;
-
-  floatingCall.href = "tel:" + BUSINESS_PHONE;
-
-}else{
-
-  phoneLink.textContent = "Phone number to be updated";
-  phoneLink.href = "#";
-
-  floatingCall.href = "#";
-
-}
-
-
-if(BUSINESS_WHATSAPP){
-
-  whatsappLink.textContent = "Chat with us on WhatsApp";
-  whatsappLink.href =
-    "https://wa.me/" +
-    BUSINESS_WHATSAPP +
-    "?text=" +
-    encodeURIComponent(
-      "Hello Star Bridge Finance Solution, I would like to discuss a financial requirement."
-    );
-
-  floatingWhatsapp.href = whatsappLink.href;
-
-}else{
-
-  whatsappLink.textContent = "WhatsApp number to be updated";
-  whatsappLink.href = "#";
-
-  floatingWhatsapp.href = "#";
-
-}
-
-
-if(BUSINESS_EMAIL){
-
-  emailLink.textContent = BUSINESS_EMAIL;
-  emailLink.href = "mailto:" + BUSINESS_EMAIL;
-
-}else{
-
-  emailLink.textContent = "Business email to be updated";
-  emailLink.href = "#";
-
-}
-
-
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
-
-const menuButton = document.getElementById("menuButton");
+const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 
-menuButton.addEventListener("click", function(){
+navToggle.addEventListener("click", function(){
 
   navLinks.classList.toggle("open");
-  document.body.classList.toggle("menu-open");
 
 });
 
-
-document.querySelectorAll(".nav-links a").forEach(function(link){
+navLinks.querySelectorAll("a").forEach(function(link){
 
   link.addEventListener("click", function(){
 
     navLinks.classList.remove("open");
-    document.body.classList.remove("menu-open");
 
   });
 
 });
 
 
-/* =========================================================
+/* =====================================================
    FAQ ACCORDION
-   ========================================================= */
+===================================================== */
 
-document.querySelectorAll(".faq-question").forEach(function(button){
+document.querySelectorAll(".faq-item").forEach(function(item){
 
-  button.addEventListener("click", function(){
+  const question = item.querySelector(".faq-q");
+  const answer = item.querySelector(".faq-a");
 
-    const item = button.parentElement;
-    const answer = item.querySelector(".faq-answer");
+  question.addEventListener("click", function(){
 
-    document.querySelectorAll(".faq-item").forEach(function(other){
+    const isOpen = item.classList.contains("open");
 
-      if(other !== item){
+    document.querySelectorAll(".faq-item.open").forEach(function(openItem){
 
-        other.classList.remove("active");
+      openItem.classList.remove("open");
 
-        const otherAnswer =
-          other.querySelector(".faq-answer");
+      openItem.querySelector(".faq-a").style.maxHeight = null;
 
-        otherAnswer.style.maxHeight = null;
+    });
+
+    if(!isOpen){
+
+      item.classList.add("open");
+
+      answer.style.maxHeight = answer.scrollHeight + "px";
+
+    }
+
+  });
+
+});
+
+
+/* =====================================================
+   GOOGLE APPS SCRIPT CONNECTION
+===================================================== */
+
+/*
+   IMPORTANT:
+   This is your Google Apps Script Web App URL.
+*/
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzt1MbkCtNIHK4sXW8Q0IxBJWsfTQADW53Yv2vsKIiWJm2a3ujO2HZ0qTr2cdTX6sgQ0w/exec";
+
+
+/* =====================================================
+   CUSTOMER ENQUIRY FORM
+===================================================== */
+
+const enquiryForm = document.getElementById("enquiryForm");
+
+enquiryForm.addEventListener("submit", async function(event){
+
+  event.preventDefault();
+
+  const form = this;
+
+  const button = form.querySelector(".submit-btn");
+
+  const successMessage =
+        document.getElementById("formSuccess");
+
+  const originalButtonText =
+        button.textContent;
+
+
+  /* -----------------------------
+     GET CUSTOMER INFORMATION
+  ----------------------------- */
+
+  const customerData = {
+
+    name:
+      document.getElementById("fname")
+      .value
+      .trim(),
+
+    mobile:
+      document.getElementById("fmobile")
+      .value
+      .trim(),
+
+    email:
+      document.getElementById("femail")
+      .value
+      .trim(),
+
+    city:
+      document.getElementById("fcity")
+      .value
+      .trim(),
+
+    service:
+      document.getElementById("fservice")
+      .value,
+
+    message:
+      document.getElementById("fmessage")
+      .value
+      .trim()
+
+  };
+
+
+  /* -----------------------------
+     BASIC VALIDATION
+  ----------------------------- */
+
+  if(
+    !customerData.name ||
+    !customerData.mobile ||
+    !customerData.email ||
+    !customerData.city ||
+    !customerData.service
+  ){
+
+    alert(
+      "Please fill all required fields."
+    );
+
+    return;
+
+  }
+
+
+  /* -----------------------------
+     MOBILE VALIDATION
+  ----------------------------- */
+
+  if(!/^[0-9]{10}$/.test(customerData.mobile)){
+
+    alert(
+      "Please enter a valid 10-digit mobile number."
+    );
+
+    return;
+
+  }
+
+
+  /* -----------------------------
+     CHANGE BUTTON
+  ----------------------------- */
+
+  button.disabled = true;
+
+  button.textContent =
+    "Submitting...";
+
+
+  successMessage.style.display =
+    "none";
+
+
+  /* -----------------------------
+     SEND TO GOOGLE SHEETS
+  ----------------------------- */
+
+  try{
+
+    await fetch(
+      GOOGLE_SCRIPT_URL,
+      {
+
+        method:"POST",
+
+        mode:"no-cors",
+
+        headers:{
+          "Content-Type":
+          "text/plain;charset=utf-8"
+        },
+
+        body:
+          JSON.stringify(customerData)
+
+      }
+    );
+
+
+    /*
+       Google Apps Script receives
+       the enquiry and adds it to
+       your Google Sheet.
+
+       It also sends the email
+       notification.
+    */
+
+
+    button.textContent =
+      "Enquiry Submitted ✓";
+
+
+    successMessage.style.display =
+      "block";
+
+
+    form.reset();
+
+
+    /* Scroll to success message */
+
+    successMessage.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+
+    /* Restore button */
+
+    setTimeout(function(){
+
+      button.disabled = false;
+
+      button.textContent =
+        originalButtonText;
+
+      successMessage.style.display =
+        "none";
+
+    },5000);
+
+
+  }catch(error){
+
+    console.error(
+      "Form submission error:",
+      error
+    );
+
+
+    button.disabled = false;
+
+    button.textContent =
+      originalButtonText;
+
+
+    alert(
+      "Unable to submit the enquiry right now. " +
+      "Please contact us directly on 9110076215."
+    );
+
+  }
+
+});
+
+
+/* =====================================================
+   FADE-UP ANIMATION
+===================================================== */
+
+const observer =
+new IntersectionObserver(
+
+  function(entries){
+
+    entries.forEach(function(entry){
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("in");
 
       }
 
     });
 
+  },
 
-    item.classList.toggle("active");
+  {
+    threshold:.15
+  }
+
+);
 
 
-    if(item.classList.contains("active")){
+document
+.querySelectorAll(".fade-up")
+.forEach(function(element){
 
-      answer.style.maxHeight =
-        answer.scrollHeight + "px";
-
-    }else{
-
-      answer.style.maxHeight = null;
-
-    }
-
-  });
+  observer.observe(element);
 
 });
 
 
-/* =========================================================
-   ENQUIRY FORM
-   ========================================================= */
+/* =====================================================
+   PHONE NUMBER - ONLY DIGITS
+===================================================== */
 
 document
-  .getElementById("enquiryForm")
-  .addEventListener("submit", function(event){
+.getElementById("fmobile")
+.addEventListener("input", function(){
 
-    event.preventDefault();
+  this.value =
+    this.value
+    .replace(/\D/g,"")
+    .slice(0,10);
 
-
-    if(!BUSINESS_EMAIL){
-
-      alert(
-        "Please configure the business email address in the index.html file before submitting enquiries."
-      );
-
-      return;
-
-    }
-
-
-    const name =
-      document.getElementById("name").value.trim();
-
-    const mobile =
-      document.getElementById("mobile").value.trim();
-
-    const email =
-      document.getElementById("email").value.trim();
-
-    const city =
-      document.getElementById("city").value.trim();
-
-    const service =
-      document.getElementById("service").value;
-
-    const message =
-      document.getElementById("message").value.trim();
-
-
-    const subject =
-      "Website Enquiry - " + service;
-
-
-    const body =
-`New enquiry received from Star Bridge Finance Solution website.
-
-Name: ${name}
-Mobile: ${mobile}
-Email: ${email || "Not provided"}
-City: ${city || "Not provided"}
-Requirement: ${service}
-
-Requirement Details:
-${message || "Not provided"}
-
---------------------------------
-This enquiry was submitted through the Star Bridge Finance Solution website.`;
-
-
-    const mailto =
-      "mailto:" +
-      BUSINESS_EMAIL +
-      "?subject=" +
-      encodeURIComponent(subject) +
-      "&body=" +
-      encodeURIComponent(body);
-
-
-    window.location.href = mailto;
-
-  });
-
-
-/* =========================================================
-   MOBILE PHONE VALIDATION
-   ========================================================= */
-
-document
-  .getElementById("mobile")
-  .addEventListener("input", function(){
-
-    this.value =
-      this.value.replace(/\D/g,"").slice(0,10);
-
-  });
-
-
-/* =========================================================
-   CURRENT YEAR
-   ========================================================= */
-
-const year =
-  new Date().getFullYear();
-
-document
-  .querySelector(".footer-bottom span")
-  .textContent =
-  "© " + year +
-  " Star Bridge Finance Solution. All Rights Reserved.";
+});
 
 </script>
 
